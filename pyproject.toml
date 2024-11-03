@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "docstring-geneater"
+version = "0.1.0"
+description = ""
+authors = ["Bo Li"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+indent-width = 4
+line-length = 120
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 120
+indent-style = "space"
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.flake8-bandit]
+check-typed-exception = true
