@@ -2,11 +2,11 @@ import argparse
 import ast
 import os
 
-from langchain_ollama.llms import OllamaLLM
-
 from chain import get_docstring_chain
-
-llm = OllamaLLM(model="llama3.1")
+from llms import get_llm
+from dotenv import load_dotenv
+load_dotenv()
+llm = get_llm("ollama")
 docstring_chain = get_docstring_chain(llm)
 
 
